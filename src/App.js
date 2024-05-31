@@ -28,7 +28,7 @@ const App = () => {
   const numClickHandler = (e) => {
     e.preventDefault();
     const value = e.target.innerHTML;
-
+    
     if (removeSpaces(calc.num).length < 16) {
       setCalc({
         ...calc,
@@ -40,6 +40,9 @@ const App = () => {
             : toLocaleString(calc.num + value),
         res: !calc.sign ? 0 : calc.res,
       });
+
+      console.log('Num: ' + calc.num);
+      console.log('Res: ' + calc.res)
     }
   };
 
